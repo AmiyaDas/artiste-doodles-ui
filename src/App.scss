@@ -1,10 +1,51 @@
 $color-primary: #000;
 $color-primary-hover: #000;
 $color-background: #f6f0ea; /* matches beige tone */
+$header-background: #fff0ee; /* light pink for header */
+
+// previous colors
+$icon-color: #6d4211;
+$link-color: #6d4211;
+$title-color: #666;
+$text-color: #111;
+$white-color: #fff;
+$border-color: #ccc;
+$shadow-color: rgba(0, 0, 0, 0.15) 0px 4px 12px 0px;
+
+@font-face {
+  font-family: artisteDoodles;
+  src: url("assets/ForeverFound.woff");
+}
 
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: $color-background;
+  // background-color: $color-background;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 220, 200, 0.8) 0%,
+    rgba(255, 235, 220, 0.9) 30%,
+    rgba(255, 245, 235, 1) 60%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  // background: radial-gradient(
+  //     circle at top left,
+  //     rgba(255, 200, 180, 0.6),
+  //     transparent 60%
+  //   ),
+  //   radial-gradient(
+  //     circle at top right,
+  //     rgba(255, 210, 190, 0.5),
+  //     transparent 70%
+  //   ),
+  //   linear-gradient(
+  //     180deg,
+  //     rgba(255, 235, 220, 0.95) 0%,
+  //     rgba(255, 250, 245, 1) 100%
+  //   );
+  // background-image: url("assets/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: $color-primary;
   margin: 0;
   padding: 0;
@@ -15,15 +56,19 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    background-color: $color-background;
+    background-color: $header-background;
     font-size: 18pt;
+    box-shadow: 0px 1px 10px grey;
+
     .center.title {
       font-weight: 600;
       flex: 3;
       text-align: center;
-      .app-title {
-        font-family: fantasy;
-      }
+    }
+    .app-title {
+      font-family: artisteDoodles;
+      font-size: 26pt;
+      font-weight: normal;
     }
     .left {
       display: flex;
