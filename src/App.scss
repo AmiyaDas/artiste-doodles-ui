@@ -1,0 +1,45 @@
+$color-primary: #000;
+$color-primary-hover: #000;
+$color-background: #f6f0ea; /* matches beige tone */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $color-background;
+  color: $color-primary;
+  margin: 0;
+  padding: 0;
+
+  /* header */
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: $color-background;
+    font-size: 18pt;
+    .center.title {
+      font-weight: 600;
+      flex: 3;
+      text-align: center;
+      .app-title {
+        font-family: fantasy;
+      }
+    }
+    .left {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+    .right {
+      flex: 1;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 1rem;
+      stroke-width: 2;
+      cursor: pointer;
+    }
+  }
+}
